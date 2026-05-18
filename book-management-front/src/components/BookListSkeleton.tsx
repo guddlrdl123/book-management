@@ -1,3 +1,4 @@
+// 책 목록이 로딩되는 동안 보여줄 스켈레톤 컴포넌트
 export default function BookListSkeleton() {
     return (
         <div className="book-grid">
