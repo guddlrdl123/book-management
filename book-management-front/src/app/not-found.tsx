@@ -1,4 +1,6 @@
 import Link from 'next/link'
+
+// 404 Not Found 페이지 컴포넌트
 export default function NotFoundPage() {
     return (
         <div className="empty-state">
