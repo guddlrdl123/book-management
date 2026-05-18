@@ -1,5 +1,6 @@
 import Link from 'next/link'
 
+// 도서 카드 컴포넌트, 도서 목록에서 각 도서를 대표하는 카드 형태로 정보를 보여줌
 interface BookCardProps {
     id: number
     title: string
