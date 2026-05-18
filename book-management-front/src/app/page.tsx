@@ -3,6 +3,7 @@ import BookList from '@/components/BookList'
 import BookListSkeleton from '@/components/BookListSkeleton'
 import SearchBar from '@/components/SearchBar'
 
+// 홈 페이지 컴포넌트, 도서 목록과 검색 기능을 포함
 export default async function Home({
     searchParams,
 }: {

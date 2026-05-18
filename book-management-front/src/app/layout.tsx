@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import Link from 'next/link'
-
+// 루트 레이아웃 컴포넌트, 모든 페이지에서 공통으로 사용되는 레이아웃과 스타일을 정의
 export const metadata: Metadata = {
     title: '책방 | 도서 관리 시스템',
     description: '소규모 서점 온라인 도서 관리',
