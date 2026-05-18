@@ -8,6 +8,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import java.util.List;
 
+// 애플리케이션 실행 시 초기 데이터 삽입을 위한 클래스
+
 @Component
 @RequiredArgsConstructor
 public class DataInitializer implements CommandLineRunner {
