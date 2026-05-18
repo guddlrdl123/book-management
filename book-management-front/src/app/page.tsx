@@ -4,8 +4,8 @@ import BookListSkeleton from '@/components/BookListSkeleton'
 import SearchBar from '@/components/SearchBar'
 
 export default async function Home({
-                                       searchParams,
-                                   }: {
+    searchParams,
+}: {
     searchParams: Promise<{ title?: string }>
 }) {
     const { title } = await searchParams
