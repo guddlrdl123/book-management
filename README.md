@@ -15,10 +15,10 @@
 | 메서드 | URL | 설명 |
 |--------|-----|------|
 | GET | /api/books | 전체 도서 목록 조회 |
-| GET | /api/books?title={keyword} | 제목 키워드 검색 ⭐ |
+| GET | /api/books?title={keyword} | 제목 키워드 검색 |
 | GET | /api/books/{id} | 단건 도서 조회 |
 | POST | /api/books | 도서 등록 |
-| PUT | /api/books/{id} | 도서 수정 ⭐ |
+| PUT | /api/books/{id} | 도서 수정 |
 | DELETE | /api/books/{id} | 도서 삭제 |
 
 ## 실행 방법
@@ -74,8 +74,6 @@ src/
 
 ## 가산점 구현 항목
 
-- ✅ PUT /api/books/{id} 수정 기능 (+4점)
-- ✅ 도서 검색 기능 (title keyword, Query Param) (+3점)
-- ✅ Suspense + Skeleton UI (animate-pulse 대응) (+2점)
-
-합계: +9점 (최대 +10점)
+-  PUT /api/books/{id} 수정 기능
+-  도서 검색 기능 (title keyword, Query Param)
+-  Suspense + Skeleton UI (animate-pulse 대응)
