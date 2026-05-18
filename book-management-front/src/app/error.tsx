@@ -1,4 +1,5 @@
 'use client'
+// 오류 발생시 보여줄 컴포넌트
 export default function ErrorPage({ error, reset }: { error: Error; reset: () => void }) {
     return (
         <div className="empty-state">
