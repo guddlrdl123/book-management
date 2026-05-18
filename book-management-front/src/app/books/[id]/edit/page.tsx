@@ -2,6 +2,8 @@
 import { use, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 
+// 도서 수정 페이지 컴포넌트
+
 const API_URL = process.env.NEXT_PUBLIC_API_URL
 
 export default function EditBookPage({ params }: { params: Promise<{ id: string }> }) {
