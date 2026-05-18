@@ -13,18 +13,22 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class BookService {
 
+    // Repository 주입
     private final BookRepository bookRepository;
 
+    // CRUD + 검색 로직 구현
     public List<BookDto> getAllBooks() {
         return bookRepository.findAll().stream().map(this::toDto).collect(Collectors.toList());
     }
 
+    // 단건 조회
     public BookDto getBookById(Long id) {
         Book book = bookRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Book not found: " + id));
         return toDto(book);
     }
 
+    // 등록
     public BookDto createBook(BookDto dto) {
         Book book = Book.builder()
                 .title(dto.getTitle())
@@ -37,6 +41,7 @@ public class BookService {
         return toDto(bookRepository.save(book));
     }
 
+    // 수정
     public BookDto updateBook(Long id, BookDto dto) {
         Book book = bookRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Book not found: " + id));
@@ -49,16 +54,19 @@ public class BookService {
         return toDto(bookRepository.save(book));
     }
 
+    // 삭제
     public void deleteBook(Long id) {
         if (!bookRepository.existsById(id)) throw new RuntimeException("Book not found: " + id);
         bookRepository.deleteById(id);
     }
 
+    // 검색
     public List<BookDto> searchByTitle(String title) {
         return bookRepository.findByTitleContainingIgnoreCase(title).stream()
                 .map(this::toDto).collect(Collectors.toList());
     }
 
+    // Entity -> DTO 변환 메서드
     private BookDto toDto(Book book) {
         return BookDto.builder()
                 .id(book.getId())
