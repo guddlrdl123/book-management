@@ -1,7 +1,7 @@
 import BookCard from './BookCard'
 
 // 도서 목록 컴포넌트, 도서 데이터를 받아서 BookCard 컴포넌트를 이용해 목록 형태로 보여줌
-const API_URL = process.env.NEXT_PUBLIC_API_URL
+const API_URL = ''
 
 interface Book {
     id: number

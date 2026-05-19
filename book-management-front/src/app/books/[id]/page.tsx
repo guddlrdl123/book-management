@@ -4,7 +4,7 @@ import DeleteButton from '@/components/DeleteButton'
 
 // 도서 상세 페이지 컴포넌트
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL
+const API_URL = ''
 
 interface Book {
     id: number

@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 
 // 도서 등록 페이지 컴포넌트
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL
+const API_URL = ''
 
 export default function RegisterPage() {
     const router = useRouter()
