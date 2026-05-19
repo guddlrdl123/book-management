@@ -25,7 +25,7 @@ jobs:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           application_name: book-management
-          environment_name: book-management-env
+          environment_name: Book-management-env-1
           region: ap-northeast-2
           version_label: ${{ github.sha }}
           deployment_package: build/libs/book-management-api-0.0.1-SNAPSHOT.jar
