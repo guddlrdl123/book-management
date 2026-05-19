@@ -4,7 +4,7 @@ import DeleteButton from '@/components/DeleteButton'
 
 // 도서 상세 페이지 컴포넌트
 
-const API_URL = ''
+const API_URL = process.env.BACKEND_URL
 
 interface Book {
     id: number
@@ -23,8 +23,8 @@ async function getBook(id: string): Promise<Book | null> {
 }
 
 export default async function BookDetailPage({
-                                                 params,
-                                             }: {
+    params,
+}: {
     params: Promise<{ id: string }>
 }) {
     const { id } = await params
@@ -61,12 +61,12 @@ export default async function BookDetailPage({
                     )}
 
                     <div className="detail-badges">
-            <span className={`badge ${book.available ? 'badge-available' : 'badge-unavailable'}`} style={{ fontSize: '0.8rem', padding: '4px 12px' }}>
-              {book.available ? '✓ 대출 가능' : '✗ 대출 중'}
-            </span>
+                        <span className={`badge ${book.available ? 'badge-available' : 'badge-unavailable'}`} style={{ fontSize: '0.8rem', padding: '4px 12px' }}>
+                            {book.available ? '✓ 대출 가능' : '✗ 대출 중'}
+                        </span>
                         <span className={`badge ${book.purchasable ? 'badge-purchasable' : 'badge-not-purchasable'}`} style={{ fontSize: '0.8rem', padding: '4px 12px' }}>
-              {book.purchasable ? '✓ 구매 가능' : '✗ 구매 불가'}
-            </span>
+                            {book.purchasable ? '✓ 구매 가능' : '✗ 구매 불가'}
+                        </span>
                     </div>
 
                     <div className="detail-actions">
