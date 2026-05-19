@@ -77,3 +77,19 @@ src/
 -  PUT /api/books/{id} 수정 기능
 -  도서 검색 기능 (title keyword, Query Param)
 -  Suspense + Skeleton UI (animate-pulse 대응)
+
+### 3차 과제
+
+## 🚀 배포 정보
+
+- **트랙**: C — AWS Amplify + Elastic Beanstalk
+- **프론트엔드**: https://main.d2awgpoo6jxh5r.amplifyapp.com
+- **백엔드**: http://Book-management-env-1.eba-s2xn2fg2.ap-northeast-2.elasticbeanstalk.com/actuator/health
+
+## AWS 서비스 목록
+- VPC (퍼블릭/프라이빗 서브넷, IGW, NAT GW)
+- Elastic Beanstalk (Java 21, t3.micro)
+- RDS MySQL 8.0 (db.t3.micro, 퍼블릭 액세스 아니요)
+- AWS Amplify (Next.js 자동 빌드/배포)
+- IAM (EC2 Role, CI/CD User 인라인 정책)
+- GitHub Actions (자동 배포)
