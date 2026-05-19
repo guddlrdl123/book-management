@@ -16,6 +16,10 @@ async function getBooks(searchTitle?: string): Promise<Book[]> {
     const url = searchTitle
         ? `${API_URL}/api/books?title=${encodeURIComponent(searchTitle)}`
         : `${API_URL}/api/books`
+    
+    console.log('BACKEND_URL:', process.env.BACKEND_URL)  // 임시 추가
+    console.log('fetch URL:', url)  // 임시 추가
+    
     const res = await fetch(url, { cache: 'no-store' })
     if (!res.ok) return []
     return res.json()
