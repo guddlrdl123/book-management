@@ -2,7 +2,7 @@
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
-const API_URL = ''
+const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL
 
 export default function DeleteButton({ bookId }: { bookId: number }) {
     const router = useRouter()

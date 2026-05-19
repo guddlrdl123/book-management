@@ -1,6 +1,6 @@
 import BookCard from './BookCard'
-
-const API_URL = process.env.BACKEND_URL  // 빈 문자열 대신 BACKEND_URL로 직접 사용
+// 도서 목록 컴포넌트, 도서 데이터를 받아서 BookCard 컴포넌트를 이용해 목록 형태로 보여줌
+const API_URL = process.env.NEXT_PUBLIC_BACKEND_URL
 
 interface Book {
     id: number
@@ -16,10 +16,6 @@ async function getBooks(searchTitle?: string): Promise<Book[]> {
     const url = searchTitle
         ? `${API_URL}/api/books?title=${encodeURIComponent(searchTitle)}`
         : `${API_URL}/api/books`
-    
-    console.log('BACKEND_URL:', process.env.BACKEND_URL)  // 임시 추가
-    console.log('fetch URL:', url)  // 임시 추가
-    
     const res = await fetch(url, { cache: 'no-store' })
     if (!res.ok) return []
     return res.json()
